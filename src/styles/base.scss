@@ -22,6 +22,10 @@ body {
   }
 
   > * {
+    -webkit-tap-highlight-color: transparent;
+    :active {
+      outline: none;
+    }
     :focus-visible {
       outline: none;
     }
