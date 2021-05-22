@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useIdleTimer } from 'react-idle-timer';
@@ -5,7 +6,7 @@ import { IntlProvider } from 'react-intl';
 import { useLocale } from '@context/LocaleContext';
 import content from '@content';
 
-const TIMEOUT = 40000;
+const TIMEOUT = 3340000;
 
 const App = ({ children }) => {
   const { locale } = useLocale();
@@ -23,7 +24,7 @@ const App = ({ children }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       // eslint-disable-next-line no-console
-      console.log(`Time remaining: ${Math.floor(getRemainingTime() / 1000)}`);
+      // console.log(`Time remaining: ${Math.floor(getRemainingTime() / 1000)}`);
     }, 1000);
     return () => clearInterval(interval);
   }, []);
